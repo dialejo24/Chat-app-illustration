@@ -34,57 +34,92 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap:2em;
+    gap:2.5em;
     align-items: center;
     justify-content: center;
 }
 
 .phone{
     width: 17.6em;
-    border-radius: 40px;
+    border-radius: 30px;
     background-color: white;
     padding: .7em;
     box-shadow: 5px 20px 15px 5px rgb(0,0,0,.1);
+    z-index: 2;
 }
 
 .app-UI{
     background-color: var(--light-grayish-violet);
-    border-radius: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.top-bar__phone{
+    position:absolute;
+    width:50%;
+    height:1em;
+    top:0;
+    background-color: var(--white);
+    left:25%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .header__app-UI{
     background: linear-gradient(45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    padding-top: 1em;
-    padding-bottom: .5em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding:1.7em 1em 1em 1em;
 }
 
 .profile{
     display:flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .profile__left-part{
     display: flex;
     color:var(--white);
+    align-items: center;
 }
 
+.profile__left-part figure{
+    margin-left:.5em;
+}
 .profile-picture{
-    width:2em;
+    width:1.5em;
     border-radius: 50%;
     border:.12em solid var(--white);
+    display: block;
 }
 
 .name-availability{
-    margin-left:1em;
+    margin-left:.5em;
 }
 .name{
-    font-size:.9em;
+    font-size:.7em;
+    font-weight: 500;
+    margin-bottom: .15em;
 }
 .availability{
-    font-size:.7em;
+    font-size:.5em;
+    margin-top:.15em;
+    color:var(--pale-violet);
 }
 
+
+.dot{
+    width:.2em;
+    height:.2em;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.dot + .dot{
+    margin-top: .09em;
+}
 
 .chat{
     padding:.2em .5em .7em .5em;
@@ -178,9 +213,50 @@ body{
     font-weight: 700;
 }
 
+.main{
+    z-index:2;
+}
+.main-tittle{
+    color: var(--very-dark-desaturated-violet);
+    text-align: center;
+    margin-bottom: .6em;
+}
+.main-paragraph{
+    color:var(--dark-grayish-violet);
+    line-height: 1.4;
+    font-size:.9rem;
+    width:20em; /*28em for desktop version*/
+    text-align: center;
+}
+
+
+.left-column{
+    background-color: var(--moderate-violet);
+    position: absolute;
+    top:0;
+    left:-13em;
+    height:30em;
+    width:23em;
+    z-index:1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.right-column{
+    position: absolute;
+    bottom:0;
+    right:-13em;
+    height:30em;
+    width: 23em;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: hsl(276, 100%, 81%,.1);
+    z-index: 1;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(228, 54%, 51%); 
 }
