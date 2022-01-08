@@ -237,7 +237,7 @@ body{
 
 
 .left-column{
-    background-color: var(--moderate-violet);
+    background: linear-gradient(20deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
     position: absolute;
     top:0;
     left:-13em;
